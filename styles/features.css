@@ -16,8 +16,10 @@
 }
 .features_heading + div > div:first-child{
     padding: 6px;
+    flex: 0.5;
 }
 .features_heading + div > div:first-child  + div{
+    flex: 0.5;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-gap: 10px; 

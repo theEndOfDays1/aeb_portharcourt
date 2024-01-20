@@ -1,0 +1,96 @@
+.review{
+    padding: 5em 3em;
+}
+.review_heading{
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    z-index: 1;
+}
+.review_heading::before{
+    content: 'REVIEWS';
+    position: absolute;
+    inset: 0 auto;
+    text-align: end;
+    font-size: 8.2em;
+    font-weight: 900;
+    color: #92929211;
+    z-index: -1;
+    transform: translateZ(-2px);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.review_heading + div{
+    display: flex; 
+    padding: 1.5em 0; 
+    z-index: 1;
+}
+.review_heading + div > div:first-child{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: start; 
+    align-items: start; 
+    max-width: 510.141px; 
+    padding: 8px;
+}
+.review_heading + div > div:nth-child(2){
+    display: flex; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory;
+}
+.review_cards{
+    outline: .5px solid rgb(117, 117, 117); 
+    padding: 10px; 
+    margin: 3px; 
+    border-radius: 10px;  
+    display: flex; 
+    /* justify-content: center; */
+    align-items: center;
+    min-width: 550.188px; 
+    max-width: 550.188px; 
+    min-height: 190px;
+    max-height: 190px;
+    scroll-snap-align: none center;
+}
+.review_cards a{
+    text-decoration: underline;
+}
+.review_cards::-webkit-scrollbar {
+    width: 10px;
+}
+.review_cards ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.review_text{
+    width: 100%;
+    padding: .5em;
+    text-align: end;
+}
+
+@media screen and (max-width: 768px){
+    .review{
+        padding: 2em;
+    }
+    .review_heading::before {
+        font-size: 4em;
+    }
+    .review_heading + div{
+        flex-direction: column;
+    }
+    .review_heading + div > div:nth-child(2){
+        padding: .5em 0;
+    }
+    .review_cards{
+        min-width: 287px;
+        max-width: 287px;
+        min-height: 200px;
+        max-height: 200px;
+        flex-direction: column;
+        padding: 1em 2em;
+    }
+    .review_text{
+        font-size: 1.2em;
+    }
+}

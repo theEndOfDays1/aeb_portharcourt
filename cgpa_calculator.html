@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="fonts/Quicksand-transfonter/stylesheet.css">
+    <link rel="stylesheet" href="fonts/Manrope-transfonter/stylesheet.css">
+    <link rel="stylesheet" href="fonts/Roboto_Mono-transfonter/stylesheet.css">
+    <link rel="stylesheet" href="fonts/Space_Grotesk-transfonter/stylesheet.css">
+    <link rel="stylesheet" href="styles/cgpa_calculator.css">
+    <link rel="icon" href="img/download.png" type="png">
+</head>
+<body>
+    <div class="content_container">
+        <div class="heading">
+            <div class="level_alert">
+                <!-- <span style="position: relative; padding: 0px 20px "><svg style="position: absolute; top: 12%; left: 0; bottom: 12%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path></svg> -->
+                </span>
+                100 Level <span class="semester_alert">1st Semester</span></div>
+            <h4 class="cgpa_title">C.G.P.A Calculator</h4>
+            <p>Please input your grades (A-F) for the respective courses.</p>
+        </div>
+
+        
+        
+        
+        <div class="wrap_calculator">
+            <div>
+                <div class="calculator_div">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Grade</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody class="js-tbody"></tbody>
+                    </table>
+                </div>
+    
+                <div class="calculate_div">
+                    <div><button onclick="getGPA()">Calculate</button></div>
+    
+                    <div><div class="total-credit">Total Credit Units: 21</div></div>
+                </div>
+            </div>
+    
+            <div class="result">
+                <div class="result_div1 js-result_div1">Total Quality Points: 0</div>
+                <div class="result_div2">
+                    <div class="render_result">
+                        <span class="js_render-cgpa">Your C.G.P.A is:</span>
+                        <span class="js_cgpa">0.00</span>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/cgpa_calculator.js"></script>
+</body>
+</html>

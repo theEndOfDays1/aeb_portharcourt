@@ -1,0 +1,93 @@
+.welcome{
+    text-align: center;
+    padding: 5.5em 9.5em 7.5em;
+    position: relative;
+}
+.welcome .manifesto{
+    font-size: 5em;
+}
+.welcome .manifesto .black-sheep{
+    color: var(--like_gray);
+    font-weight: 500;
+}
+.welcome .manifesto .black-sheep svg{
+    position: absolute; 
+    width: 5em; 
+    inset: auto 2.8em -.28em 0; 
+    z-index: -1;
+}
+.welcome .side_note{
+    padding: 17px 40px;
+}
+.welcome .squiggly_fix{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome .squiggly_fix svg{
+    flex: 0.5;
+    width: 15em;
+    height: 9em;
+    position: absolute;
+    left: 10em;
+}
+.welcome .squiggly_fix a{
+    flex: 1;
+}
+.view_curriculum{
+    padding: 12px 24px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    position: relative;
+    outline: 2px solid black;
+    transition: .15s all var(--ideal_bezier);
+    z-index: 1;
+    display: flex;
+}
+.view_curriculum::after{
+    content: '';
+    background: #f7f7f7;
+    transition: all 250ms;
+    transform: scaleX(0);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.view_curriculum:hover::after{
+    transform: scaleX(1);
+    /* inset: 0; */
+}
+.view_curriculum:hover{
+    color: black;
+    background: transparent;
+    font-weight: bold;
+    
+}
+/* .welcome > p{
+    background-image: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.925));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+} */
+@media screen and (max-width: 768px){
+    .welcome{
+        padding: 10em 1.2em;
+        /* padding-inline: 1.4em; */
+    }
+    .welcome svg:not(.manifesto svg){
+        display: none;
+    }
+    .welcome .manifesto{
+        font-size: 2.56em;
+    }
+    .welcome .side_note {
+        padding: 20px 15px 15px;
+        font-size: var(--font_text);
+    }
+}

@@ -1,0 +1,65 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', 'Manrope', 'archia',  Arial, Helvetica, sans-serif;
+    color: black;
+    /* outline: .5px solid rgb(117, 117, 117); */
+}
+html, body{
+    margin: 0;
+    /* background-image: linear-gradient(155deg, white, rgb(240, 240, 240),   gainsboro );
+    background-attachment: fixed; */
+    background-color: #f7f7f7;
+    color: #382d0f;
+}
+:root{
+    --transition_2s: .2s all ease-in-out;
+    --like_gray: rgb(121, 121, 121);
+    --beach-water_blue: rgb(172, 195, 212);
+    --ideal_bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ideal_shadow: 0 0 40px .3px rgba(0, 0, 0, 0.123);
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.hide-menu{
+    display: none;
+}
+
+.just_padding{
+    padding: 5.75em 5.75em;
+}
+.overview, .features, .operation, .review, .support{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px){
+
+    .hide-menu{
+        display: block;
+    }
+    .scroll-not{
+        overflow: hidden;
+    }
+    .text{
+        font-size: var(--font_text);
+        color: #000000a4;
+        /* font-family: Manrope, Quicksand, serif; */
+    }
+    :root{
+        --ideal_bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        /* --ideal_bezier-menu: cubic-bezier(0.68,-0.55, 0.8, 1.33); */
+        --ideal_bezier-menu: cubic-bezier(0.2,-0.38, 0.9, 1.38);
+        --font_text: 14px;
+    }
+    .just_padding, .footing{
+        padding: 0;
+    }
+    .just_padding > section:not(.hero_section, .overview, .features, .operation, .review, .support){
+        display: none;
+    }
+}

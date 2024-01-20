@@ -1,0 +1,102 @@
+.heading{
+    display: flex;
+    gap: 0.8em;
+    padding: 25px 100px;
+    position: fixed;
+    inset: auto 0;
+    z-index: 2000;
+    transition: .25s all ease-in;
+}
+.window-scroll{
+    background-color: rgb(250, 250, 250);
+    /* outline: .5px solid rgb(117, 117, 117); */
+    /* background-color: rgba(255, 255, 255, 0.616); */
+    /* backdrop-filter: blur(80px); */
+}
+.start{
+    flex: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start a{
+    font-size: 1.86em;
+    font-weight: 800;
+    text-align: center;
+}
+.start  a span{
+    display: block;
+    font-size: .3em;
+}
+.middle{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.middle nav{
+    flex: 1;
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+    align-items: center;
+    padding: 5px 35px;
+}
+.middle nav a{
+    font-size: .785em;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    transition: var(--transition_2s);
+    text-align: center;
+    /* text-transform: capitalize; */
+}
+.middle nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all .2s var(--ideal_bezier);
+}
+.middle nav a:focus::after,
+.middle nav a:hover::after{
+    transform: scaleX(.79);
+}
+.end{
+    flex: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8em;
+}
+@media screen and (max-width: 768px ){
+    .heading{
+        padding: 10px;
+        inset: 0;
+        flex-direction: column;
+        background: #fafafa;
+        transform: translateY(-100vh);
+        transition: .235s all var(--ideal_bezier-menu);
+        /* transition: .235s all ease-in; */
+        opacity: 0;
+    }
+    .middle nav{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+    .middle nav a{
+        font-size: .9em;
+    }
+    .end{
+        flex: 0.3;
+        align-items: start;
+    }
+    .show{
+        transform: translate(0);
+        opacity: 1;
+    }
+}

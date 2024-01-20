@@ -1,0 +1,54 @@
+.support{
+    padding: 50px;
+}
+.support_body{
+    margin: auto 200px;
+    padding: 30px 50px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    background-color: gainsboro;
+    outline: .5px solid rgb(117, 117, 117);
+    border-radius: 15px;
+
+}
+.support_text{
+    padding: 0.5em;
+    z-index: 1;
+}
+.support_mssg{
+    color: #0000007c;
+}
+.support_base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding-block-start: 5px;
+}
+.support_base a{
+    background-color: rgba(30, 30, 30, 0.863);
+    color: white;
+    padding: 8px ;
+    min-width: 105.094px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+@media screen and (max-width: 768px){
+    .support{
+        padding: .5em;
+    }
+    .support_body{
+        margin: auto 20px;
+        padding: 30px;
+    }
+    .support_text{
+        padding: 0;
+        font-size: 1.2em;
+    }
+    .support_mssg{
+        font-size: var(--font_text);
+    }
+}
